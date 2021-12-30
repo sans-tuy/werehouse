@@ -4,28 +4,10 @@ class User_model extends CI_Model
 {
     private $_table = "users";
 
-    public $user_id;
     public $full_name;
     public $password;
     public $email;
     public $role;
-
-    public function rules()
-    {
-        return [
-            ['field' => 'full_name',
-            'label' => 'Name',
-            'rules' => 'required'],
-			
-            ['field' => 'password',
-            'label' => 'Password',
-            'rules' => 'required|min_length[3]'],
-            
-            ['field' => 'email',
-            'label' => 'Email',
-            'rules' => 'required|valid_email']
-        ];
-    }
 
     public function getAll()
     {
